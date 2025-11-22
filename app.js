@@ -56,15 +56,15 @@ function submit(){
 
 
 
-// console.log(userName)
-// console.log(email)
-// console.log(password)
-// console.log(age)
-// console.log(cnic)
+console.log(userName)
+console.log(email)
+console.log(password)
+console.log(age)
+console.log(cnic)
 
 
-// console.log(userNameError)
-// console.log(emailError)
-// console.log(passwordError)
-// console.log(ageError)
-// console.log(contactnoError)
+console.log(userNameError)
+console.log(emailError)
+console.log(passwordError)
+console.log(ageError)
+console.log(contactnoError)
