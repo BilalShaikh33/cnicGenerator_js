@@ -57,13 +57,31 @@ function submit(){
 
     // contact number
     if (contactno.value == 0 ) {
-        "Please Enter your number"
+        contactError.innerText = "Please Enter your number"
         
     }
 
    else if (contactno.value.length < 11) {
         contactError.innerText = "Please enter valid number"
         
+    }
+    else{
+        contactError.innerText = ""
+    }
+
+    // password
+    if (password.value = "") {
+        passwordError.innerText = "Please enter password"
+
+        
+    }
+    else if (password.value.length < 8 ){
+
+        passwordError.innerText = "Password must be greater than 8 letters"
+    }
+
+    else{
+        passwordError.innerText = ""
     }
 
    
