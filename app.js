@@ -15,29 +15,37 @@ var contactError = document.getElementById("contactError")
 
 
 function submit(){
+    var hasError = false
+
     // name
     if (userName.value == "") {
         userNameError.innerText = "Please enter username"   
+        var hasError = true
     }
     else if (userName.value.length < 5) {
         userNameError.innerText = "Must greater than 5 number"
+           var hasError = true
         
     }
     else{
         userNameError.innerText = ""
+           var hasError = false
     }
 
     // email
 
     if (email.value == "") {
         emailError.innerText = "Please Enter Email Address"
+          var hasError = true
         
     }
     else if (!email.value.includes("@")){
         emailError.innerText = "please enter valid email"
+          var hasError = true
     }
     else{
         emailError.innerText = ""
+          var hasError = false
     }
 
 
@@ -45,29 +53,35 @@ function submit(){
 
     if (age.value == 0 ) {
         ageError.innerText = "Please enter your age"
+          var hasError = true
         
     }
     else if (age.value < 18) {
         ageError.innerText = "You are not eligible"
+          var hasError = true
         
     }
     else{
         ageError.innerText = ""
+          var hasError = false
     }
     
     // password
     if (password.value = "") {
         passwordError.innerText = "Please enter password"
+          var hasError = true
         
         
     }
     else if (password.value.length < 8 ){
         
         passwordError.innerText = "Password must be greater than 8 letters"
+          var hasError = true
     }
     
     else{
         passwordError.innerText = ""
+          var hasError = false
     }
     
 }
@@ -76,22 +90,24 @@ function submit(){
     // contact number
     if (contactno.value == 0 ) {
         contactError.innerText = "Please Enter your number"
-        
+          var hasError = true
     }
 
    else if (contactno.value.length < 11) {
         contactError.innerText = "Please enter valid number"
+          var hasError = true
         
     }
     else{
         contactError.innerText = ""
+          var hasError = false
     }
 
 
 
 
 
-    
+
 // console.log(userName)
 // console.log(email)
 // console.log(password)
