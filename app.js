@@ -102,6 +102,10 @@ function submit(){
         contactError.innerText = ""
           var hasError = false
     }
+    if (hasError == false) {
+        var cnic = (Math.random()*10000000000000).tofixed()
+        
+    }
 
 
 
