@@ -15,6 +15,7 @@ var contactError = document.getElementById("contactError")
 
 
 function submit(){
+    // name
     if (userName.value == "") {
         userNameError.innerText = "Please enter username"   
     }
@@ -25,6 +26,8 @@ function submit(){
     else{
         userNameError.innerText = ""
     }
+
+    // email
 
     if (email.value == "") {
         emailError.innerText = "Please Enter Email Address"
@@ -51,6 +54,19 @@ function submit(){
     else{
         ageError.innerText = ""
     }
+
+    // contact number
+    if (contactno.value == 0 ) {
+        "Please Enter your number"
+        
+    }
+
+   else if (contactno.value.length < 11) {
+        contactError.innerText = "Please enter valid number"
+        
+    }
+
+   
 
 }
 
