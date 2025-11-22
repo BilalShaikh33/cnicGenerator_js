@@ -14,45 +14,45 @@ var passwordError = document.getElementById("passwordError")
 var contactError = document.getElementById("contactError")
 
 
-// function submit(){
-//     if (userName.value == "") {
-//         userNameError.innerText = "Please enter username"   
-//     }
-//     else if (userName.value.length < 5) {
-//         userNameError.innerText = "Must greater than 5 number"
+function submit(){
+    if (userName.value == "") {
+        userNameError.innerText = "Please enter username"   
+    }
+    else if (userName.value.length < 5) {
+        userNameError.innerText = "Must greater than 5 number"
         
-//     }
-//     else{
-//         userNameError.innerText = ""
-//     }
+    }
+    else{
+        userNameError.innerText = ""
+    }
 
-//     if (email.value == "") {
-//         emailError.innerText = "Please Enter Email Address"
+    if (email.value == "") {
+        emailError.innerText = "Please Enter Email Address"
         
-//     }
-//     else if (!email.value.includes("@")){
-//         emailError.innerText = "please enter valid email"
-//     }
-//     else{
-//         emailError.innerText = ""
-//     }
+    }
+    else if (!email.value.includes("@")){
+        emailError.innerText = "please enter valid email"
+    }
+    else{
+        emailError.innerText = ""
+    }
 
 
-//     // age
+    // age
 
-//     if (age.value == 0 ) {
-//         ageError.innerText = "Please enter your age"
+    if (age.value == 0 ) {
+        ageError.innerText = "Please enter your age"
         
-//     }
-//     else if (age.value < 18) {
-//         ageError.innerText = "You are not eligible"
+    }
+    else if (age.value < 18) {
+        ageError.innerText = "You are not eligible"
         
-//     }
-//     else{
-//         ageError.innerText = ""
-//     }
+    }
+    else{
+        ageError.innerText = ""
+    }
 
-// }
+}
 
 
 
