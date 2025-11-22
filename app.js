@@ -103,8 +103,9 @@ function submit(){
           var hasError = false
     }
     if (hasError == false) {
-        var cnic = (Math.random()*10000000000000).tofixed()
-        
+        var cnicNo = (Math.random()*10000000000000).tofixed()
+       cnicNo = cnic.toString().substring(0,4)+"-"+ cnic.toString().substring(4,12)+"-" +cnic.toString().substring(12,13)
+       cnic.innerText = cnicNo
     }
 
 
