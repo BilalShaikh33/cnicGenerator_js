@@ -7,11 +7,11 @@ var contactno = document.getElementById("contactno")
 var cnic = document.getElementById("cnic")
 
 
-// var userNameError = document.getElementById("userNameError")
-// var emailError = document.getElementById("emailError")
-// var ageError = document.getElementById("ageError")
-// var passwordError = document.getElementById("passwordError")
-// var contactError = document.getElementById("contactError")
+var userNameError = document.getElementById("userNameError")
+var emailError = document.getElementById("emailError")
+var ageError = document.getElementById("ageError")
+var passwordError = document.getElementById("passwordError")
+var contactError = document.getElementById("contactError")
 
 
 function submit(){
