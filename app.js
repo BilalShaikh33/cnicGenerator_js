@@ -54,6 +54,24 @@ function submit(){
     else{
         ageError.innerText = ""
     }
+    
+    // password
+    if (password.value = "") {
+        passwordError.innerText = "Please enter password"
+        
+        
+    }
+    else if (password.value.length < 8 ){
+        
+        passwordError.innerText = "Password must be greater than 8 letters"
+    }
+    
+    else{
+        passwordError.innerText = ""
+    }
+    
+}
+
 
     // contact number
     if (contactno.value == 0 ) {
@@ -69,27 +87,11 @@ function submit(){
         contactError.innerText = ""
     }
 
-    // password
-    if (password.value = "") {
-        passwordError.innerText = "Please enter password"
-
-        
-    }
-    else if (password.value.length < 8 ){
-
-        passwordError.innerText = "Password must be greater than 8 letters"
-    }
-
-    else{
-        passwordError.innerText = ""
-    }
-
-   
-
-}
 
 
 
+
+    
 // console.log(userName)
 // console.log(email)
 // console.log(password)
