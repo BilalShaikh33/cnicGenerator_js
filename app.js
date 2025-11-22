@@ -7,11 +7,11 @@ var contactno = document.getElementById("contactno")
 var cnic = document.getElementById("cnic")
 
 
-var userNameError = document.getElementById("userNameError")
-var emailError = document.getElementById("emailError")
-var ageError = document.getElementById("ageError")
-var passwordError = document.getElementById("passwordError")
-var contactError = document.getElementById("contactError")
+// var userNameError = document.getElementById("userNameError")
+// var emailError = document.getElementById("emailError")
+// var ageError = document.getElementById("ageError")
+// var passwordError = document.getElementById("passwordError")
+// var contactError = document.getElementById("contactError")
 
 
 function submit(){
@@ -56,15 +56,15 @@ function submit(){
 
 
 
-console.log(userName)
-console.log(email)
-console.log(password)
-console.log(age)
-console.log(cnic)
+// console.log(userName)
+// console.log(email)
+// console.log(password)
+// console.log(age)
+// console.log(cnic)
 
 
-console.log(userNameError)
-console.log(emailError)
-console.log(passwordError)
-console.log(ageError)
-console.log(contactnoError)
+// console.log(userNameError)
+// console.log(emailError)
+// console.log(passwordError)
+// console.log(ageError)
+// console.log(contactnoError)
