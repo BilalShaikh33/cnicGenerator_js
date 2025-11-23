@@ -67,7 +67,7 @@ function submit(){
     }
     
     // password
-    if (password.value = "") {
+    if (password.value == "") {
         passwordError.innerText = "Please enter password"
           var hasError = true
         
@@ -89,22 +89,22 @@ function submit(){
 
     // contact number
     if (contactno.value == 0 ) {
-        contactError.innerText = "Please Enter your number"
+        contactnoError.innerText = "Please Enter your number"
           var hasError = true
     }
 
    else if (contactno.value.length < 11) {
-        contactError.innerText = "Please enter valid number"
+        contactnoError.innerText = "Please enter valid number"
           var hasError = true
         
     }
     else{
-        contactError.innerText = ""
+        contactnoError.innerText = ""
           var hasError = false
     }
     if (hasError == false) {
-        var cnicNo = (Math.random()*10000000000000).tofixed()
-       cnicNo = cnic.toString().substring(0,4)+"-"+ cnic.toString().substring(4,12)+"-" +cnic.toString().substring(12,13)
+        var cnicNo = (Math.random()*10000000000000).toFixed(0)
+       cnicNo = cnicNo.toString().substring(0,4)+"-"+ cnicNo.toString().substring(4,12)+"-" +cnicNo.toString().substring(12,13)
        cnic.innerText = cnicNo
     }
 
