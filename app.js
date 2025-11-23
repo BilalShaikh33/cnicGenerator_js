@@ -11,7 +11,7 @@ var userNameError = document.getElementById("userNameError")
 var emailError = document.getElementById("emailError")
 var ageError = document.getElementById("ageError")
 var passwordError = document.getElementById("passwordError")
-var contactError = document.getElementById("contactError")
+var contactnoError = document.getElementById("contactnoError")
 
 
 function submit(){
@@ -84,37 +84,40 @@ function submit(){
           var hasError = false
     }
     
-}
-
-
+    
+    
     // contact number
     if (contactno.value == 0 ) {
-        contactnoError.innerText = "Please Enter your number"
-          var hasError = true
+      contactnoError.innerText = "Please Enter your number"
+      var hasError = true
     }
-
-   else if (contactno.value.length < 11) {
-        contactnoError.innerText = "Please enter valid number"
-          var hasError = true
-        
+    
+    else if (contactno.value.length < 11) {
+      contactnoError.innerText = "Please enter valid number"
+      var hasError = true
+      
     }
     else{
-        contactnoError.innerText = ""
-          var hasError = false
+      contactnoError.innerText = ""
+      var hasError = false
     }
+    
+    
+    
     if (hasError == false) {
-        var cnicNo = (Math.random()*10000000000000).toFixed(0)
-       cnicNo = cnicNo.toString().substring(0,4)+"-"+ cnicNo.toString().substring(4,12)+"-" +cnicNo.toString().substring(12,13)
-       cnic.innerText = cnicNo
+      var cnicNo = (Math.random()*10000000000000).toFixed(0)
+      cnicNo = cnicNo.toString().substring(0,4)+"-"+ cnicNo.toString().substring(4,12)+"-" +cnicNo.toString().substring(12,13)
+      cnic.value = cnicNo
     }
-
-
-
-
-
-
-// console.log(userName)
-// console.log(email)
+    
+  }
+    
+    
+    
+    
+    
+    // console.log(userName)
+    // console.log(email)
 // console.log(password)
 // console.log(age)
 // console.log(cnic)
