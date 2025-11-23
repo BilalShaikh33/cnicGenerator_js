@@ -3,54 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            display: flex;
-            justify-content: center;
-        }
-        button{
-            display: block;
-            margin: auto;
-            width: 100px;
-        }
-    </style>
+    <title>CNIC generator</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div>
-       
-        <input type="text" id="userName" placeholder="Enter your name" >
-        <br>
-        <b id="userNameError"></b>
-        <br>
-        <input type="text" id="email" placeholder="Enter our email">
-          <br>
-        <b id="emailError"></b>
-          <br>
-        <input type="number" id="age" placeholder="Enter your age">
-          <br>
-        <b id="ageError"></b> 
-         <br>
-        <input type="text" id="password" placeholder="Enter Your password">
-          <br>
-        <b id="passwordError"></b>
-          <br>
-        <input type="number" id="contactno" placeholder="Enter Your contactno">
-          <br>
-        <b id="contactnoError"></b> 
-        <br>
-        <input type="text" id="cnic" placeholder="Fill data or generate cnic" readonly>
-        <br>
-        <br>
-        <button onclick="submit()">Sumbit</button>
-        
+<div class="overlay"></div>
 
-    </div>
+<div class="card">
+    <h2>User Registration</h2>
+
+    <input type="text" id="userName" placeholder="Enter your name">
+    <b id="userNameError"></b>
+    <br><br>
+
+    <input type="text" id="email" placeholder="Enter your email">
+    <b id="emailError"></b>
+    <br><br>
+
+    <input type="number" id="age" placeholder="Enter your age">
+    <b id="ageError"></b>
+    <br><br>
+
+    <input type="text" id="password" placeholder="Enter your password">
+    <b id="passwordError"></b>
+    <br><br>
+
+    <input type="number" id="contactno" placeholder="Enter your contact number">
+    <b id="contactnoError"></b>
+    <br><br>
+
+    <input readonly type="text" id="cnic" placeholder="Generated CNIC will appear here">
+    <br><br>
+
+    <button onclick="submitForm()">Submit</button>
+</div>
 
 
+<script>
+var userName = document.getElementById("userName")
+var email = document.getElementById("email")
+var age = document.getElementById("age")
+var password = document.getElementById("password")
+var contactno = document.getElementById("contactno")
+var cnic = document.getElementById("cnic")
 
+var userNameError = document.getElementById("userNameError")
+var emailError = document.getElementById("emailError")
+var ageError = document.getElementById("ageError")
+var passwordError = document.getElementById("passwordError")
+var contactnoError = document.getElementById("contactnoError")
 
-    <script src="app.js"></script>
+function submitForm(){
+    var hasError = false
+
+    if(userName.value == ""){
+        userNameError.innerText = "Please enter username"
+        hasError = true
+    }
+    else if(userName.value.length < 5){
+        userNameError.innerText = "Must be greater than 5 characters"
+        hasError = true
+    }
+    else{
+        userNameError.innerText = ""
+    }
+
+    if(email.value == ""){
+        emailError.innerText = "Please enter email"
+        hasError = true
+    }
+    else if(!email.value.includes("@")){
+        emailError.innerText = "Please enter valid email"
+        hasError = true
+    }
+    else{
+        emailError.innerText = ""
+    }
+
+    if(age.value == 0){
+        ageError.innerText = "Please enter age"
+        hasError = true
+    }
+    else if(age.value < 18){
+        ageError.innerText = "You are not eligible"
+        hasError = true
+    }
+    else{
+        ageError.innerText = ""
+    }
+
+    if(password.value == ""){
+        passwordError.innerText = "Please enter password"
+        hasError = true
+    }
+    else if(password.value.length < 8){
+        passwordError.innerText = "Password must be 8+ characters"
+        hasError = true
+    }
+    else{
+        passwordError.innerText = ""
+    }
+
+    if(contactno.value.length < 11){
+        contactnoError.innerText = "Please enter valid number"
+        hasError = true
+    }
+    else{
+        contactnoError.innerText = ""
+    }
+
+    if(hasError == false){
+        var n = (Math.random()*10000000000000).toFixed(0)
+        n = n.toString().substring(0,5)+"-"+n.toString().substring(5,12)+"-"+n.toString().substring(12,13)
+        cnic.value = n
+    }
+}
+</script>
+
 </body>
 </html>
