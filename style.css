@@ -16,7 +16,7 @@ body{
     no-repeat center center/cover;
 }
 
-/* Blur Overlay */
+
 .overlay{
     position: absolute;
     width: 100%;
@@ -25,7 +25,6 @@ body{
     background: rgba(0,0,0,0.45);
 }
 
-/* Glassmorphism Card */
 .card{
     position: relative;
     width: 350px;
